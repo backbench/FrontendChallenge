@@ -1,0 +1,14 @@
+<div nav-bar></div>
+<div class="content-width">
+	<div class="story-head">New Stories</div>
+	<div class="story-content" ng-repeat="data in stories"><a href="{{data.data.url}}" target="_blank">{{data.data.title}}</a>
+
+		<p class="comment">
+			<span class="Author">By :</span><span class="Author">{{data.data.by}}</span>
+			<span class="Author space"><i class="fa fa-comment comment-icon" aria-hidden="true"> :</i></span><span class="Author" ng-if="data.data.kids.length!=0">{{data.data.kids.length}}</span>
+			<span class="Author" ng-if="!data.data.kids.length">0</span>
+			<span class="Author space" ><i class="fa fa-clock-o" aria-hidden="true"> :</i></span><span class="Author">{{time}}</span>
+
+		</p>
+	</div>
+</div>
